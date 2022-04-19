@@ -1,7 +1,5 @@
 import React from 'react';
 
-const buttons = ['AC', '+/-', '%', '÷', '7', '8', '9', 'x', '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '='];
-
 const setClass = (button) => {
   if (button === '÷' || button === 'x' || button === '-' || button === '+' || button === '=') {
     return 'calc-button orange-button';
@@ -13,6 +11,8 @@ const setClass = (button) => {
 
   return 'calc-button';
 };
+
+const Buttons = (props) => props.buttons.map((button) => (<button key={button} className={setClass(button)} type="button">{button}</button>));
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
@@ -27,7 +27,7 @@ class Calculator extends React.Component {
             <p>0</p>
           </div>
           <div className="buttons">
-            {buttons.map((button) => (<button key={button} className={setClass(button)} type="button">{button}</button>))}
+            <Buttons buttons={['AC', '+/-', '%', '÷', '7', '8', '9', 'x', '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '=']} />
           </div>
         </div>
       </div>
