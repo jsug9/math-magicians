@@ -11,7 +11,7 @@
 - JavaScript
 - React
 
-## Live Demo (not available yet)
+## Live Demo
 
 For a live demo of the Portfolio [click here](https://jsug9.github.io/math-magicians/).
 
