@@ -5,20 +5,22 @@ const Calculator = () => {
 
   const setClass = (button) => {
     if (button === '÷' || button === 'x' || button === '-' || button === '+' || button === '=') {
-      return 'orange-button';
+      return 'calc-button orange-button';
     }
 
     if (button === '0') {
-      return 'double-sized';
+      return 'calc-button double-sized';
     }
 
-    return '';
+    return 'calc-button';
   };
 
   return (
     <div className="calculator-container">
       <div className="calculator">
-        <div className="cScreen" />
+        <div className="calc-screen">
+          <p>0</p>
+        </div>
         <div className="buttons">
           {buttons.map((button) => (<button key={button} className={setClass(button)} type="button">{button}</button>))}
         </div>
