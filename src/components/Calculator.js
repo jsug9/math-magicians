@@ -1,32 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 import Buttons from './Buttons';
 import CalcScreen from './CalcScreen';
 
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+const Calculator = () => {
+  const [obj, setObj] = useState({});
 
-  handleEvent = (e) => {
+  const handleEvent = (e) => {
     const button = e.target.textContent;
-    const value = calculate(this.state, button);
-    this.setState(value);
+    const value = calculate(obj, button);
+    setObj(value);
   };
 
-  render() {
-    const { next, total, operation } = this.state;
+  const { next, total, operation } = obj;
 
-    return (
-      <div className="calculator-container">
-        <div className="calculator">
-          <CalcScreen next={next} total={total} operation={operation} />
-          <Buttons action={this.handleEvent} />
-        </div>
+  return (
+    <div className="calculator-container">
+      <div className="calculator">
+        <CalcScreen next={next} total={total} operation={operation} />
+        <Buttons action={handleEvent} />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Calculator;
