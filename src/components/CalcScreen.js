@@ -11,22 +11,11 @@ const getResult = (total, operation, next) => {
   return result;
 };
 
-class CalcScreen extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    const { total, operation, next } = this.props;
-
-    return (
-      <div className="calc-screen">
-        <p>{getResult(total, operation, next)}</p>
-      </div>
-    );
-  }
-}
+const CalcScreen = ({ total, next, operation }) => (
+  <div className="calc-screen">
+    <p>{getResult(total, operation, next)}</p>
+  </div>
+);
 
 CalcScreen.propTypes = {
   total: PropTypes.string.isRequired,
