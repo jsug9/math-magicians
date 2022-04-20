@@ -1,34 +1,28 @@
 import React from 'react';
+import calculate from '../logic/calculate';
+import Buttons from './Buttons';
+import CalcScreen from './CalcScreen';
 
-const setClass = (button) => {
-  if (button === '÷' || button === 'x' || button === '-' || button === '+' || button === '=') {
-    return 'calc-button orange-button';
-  }
-
-  if (button === '0') {
-    return 'calc-button double-sized';
-  }
-
-  return 'calc-button';
-};
-
-const Buttons = (props) => props.buttons.map((button) => (<button key={button} className={setClass(button)} type="button">{button}</button>));
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
 
+  handleEvent = (e) => {
+    const button = e.target.textContent;
+    const value = calculate(this.state, button);
+    this.setState(value);
+  };
+
   render() {
+    const { next, total, operation } = this.state;
+
     return (
       <div className="calculator-container">
         <div className="calculator">
-          <div className="calc-screen">
-            <p>0</p>
-          </div>
-          <div className="buttons">
-            <Buttons buttons={['AC', '+/-', '%', '÷', '7', '8', '9', 'x', '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '=']} />
-          </div>
+          <CalcScreen next={next} total={total} operation={operation} />
+          <Buttons action={this.handleEvent} />
         </div>
       </div>
     );
