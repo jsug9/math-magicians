@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const getResult = (total, operation, next) => {
-  let result = 0;
+  let result = '0';
   if (total) {
     result = `${total} ${operation || ''} ${next || ''}`;
   } else if (next) {
