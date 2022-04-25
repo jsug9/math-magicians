@@ -13,7 +13,9 @@
 
 ## Live Demo
 
-For a live demo of the Portfolio [click here](https://jsug9.github.io/math-magicians/).
+- [GitHub Deploy](https://jsug9.github.io/math-magicians/).
+- [Heroku]().
+- [Netlify]().
 
 ## Getting Started
 
