@@ -2,18 +2,6 @@
   text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  margin-bottom: 2rem;
-}
-
 /* Calculator */
 .calculator-container {
   display: flex;
@@ -26,7 +14,7 @@
 .calculator {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 35%;
   gap: 1px;
   background-color: #e0e0e0;
 }
