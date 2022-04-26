@@ -5,7 +5,7 @@ import Calculator from './components/Calculator';
 const App = () => (
   <div className="App">
     <header className="App-header">
-      Calculator
+      Math Magicians
     </header>
     <div>
       <Calculator />
