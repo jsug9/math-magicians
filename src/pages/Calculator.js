@@ -16,6 +16,7 @@ const Calculator = () => {
 
   return (
     <div className="calculator-container">
+      <h2>Let&apos;s do some Math!</h2>
       <div className="calculator">
         <CalcScreen next={next} total={total} operation={operation} />
         <Buttons action={handleEvent} />
