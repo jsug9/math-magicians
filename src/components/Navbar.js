@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import styles from './Navbar.module.scss';
 
 const Navbar = () => {
   const links = [
@@ -21,14 +22,15 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="App-header">
+    <nav className={styles.navbar}>
       <h1>Math Magicians</h1>
-      <ul className="links">
+      <ul className={styles.links}>
         {links.map((link) => (
           <li key={link.id}>
             <NavLink
               to={link.path}
-              activeClassName="active-link"
+              activeClassName={styles.avtiveLink}
+              className={styles.link}
               exact
             >
               {link.text}

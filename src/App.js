@@ -1,6 +1,6 @@
 import './App.scss';
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route,
 } from 'react-router-dom';
@@ -12,7 +12,7 @@ import Home from './pages/Home';
 import Quote from './pages/Quote';
 
 const App = () => (
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <div className="App">
       <Navbar />
       <Switch>
