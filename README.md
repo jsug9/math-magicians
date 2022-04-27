@@ -14,7 +14,7 @@
 ## Live Demo
 
 - [GitHub Deploy](https://jsug9.github.io/math-magicians/).
-- [Heroku]().
+- [Heroku](https://math-magicians-jsug9.herokuapp.com).
 - [Netlify](https://6268c5153f32344a0e8242bd--math-magicians-jsug9.netlify.app/calculator).
 
 ## Getting Started
