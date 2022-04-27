@@ -1,6 +1,6 @@
 {
   "name": "math-magicians",
-  "homepage": "https://jsug9.github.io/math-magicians",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
